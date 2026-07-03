@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#041b0f">
+  <link rel="icon" href="../assets/favicon.ico" sizes="any">
+  <meta name="description" content="Bolão OAZ — palpites da Copa do Mundo 2026">
+  <title>Bolão OAZ · Palpite</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="palpite.html">
+        <img class="brand-logo" src="../assets/logo-oaz.png" alt="OAZ">
+        <span class="brand-copy"><b>Bolão OAZ</b><span>Copa do Mundo 2026</span></span>
+      </a>
+      <nav id="nav-links" class="nav-links" aria-label="Navegação"></nav>
+    </header>
+
+    <section id="match-hero" class="hero" aria-live="polite"></section>
+    <div id="page-notice" class="notice"></div>
+
+    <section class="layout">
+      <section>
+        <article class="card">
+          <div id="profile-content"></div>
+          <div id="profile-notice" class="notice"></div>
+        </article>
+
+        <article id="prediction-content" class="card prediction-card hidden">
+          <span class="eyebrow">Palpite completo</span>
+          <h2 id="prediction-title">Monte seu palpite</h2>
+          <p id="prediction-subtitle" class="prediction-intro"></p>
+
+          <form id="prediction-form" class="prediction-form">
+            <div class="score-grid">
+              <label class="score-label"><span data-home-label>Brasil</span><input id="scoreHome" type="number" inputmode="numeric" min="0" max="20" required></label>
+              <span class="score-x">×</span>
+              <label class="score-label"><span data-away-label>Noruega</span><input id="scoreAway" type="number" inputmode="numeric" min="0" max="20" required></label>
+            </div>
+
+            <section class="metric-section">
+              <h3>Métricas do jogo</h3>
+              <p>Todos os campos abaixo entram na conferência do resultado final.</p>
+              <div class="metric-grid-form">
+                <label class="metric">Minuto do primeiro gol
+                  <select id="minutoPrimeiroGol" required>
+                    <option value="">Selecione</option>
+                    <option value="0'-15'">0'–15'</option>
+                    <option value="16'-30'">16'–30'</option>
+                    <option value="31'-45+'">31'–45+'</option>
+                    <option value="46'-60'">46'–60'</option>
+                    <option value="61'-75'">61'–75'</option>
+                    <option value="76'-90+'">76'–90+'</option>
+                    <option value="Sem gol">Sem gol</option>
+                  </select>
+                </label>
+                <label class="metric">Total de escanteios
+                  <select id="escanteios" required>
+                    <option value="">Selecione</option>
+                    <option value="0-3">0–3</option>
+                    <option value="4-6">4–6</option>
+                    <option value="7-10">7–10</option>
+                    <option value="11-14">11–14</option>
+                    <option value="15+">15+</option>
+                  </select>
+                </label>
+                <label class="metric">Total de cartões amarelos
+                  <select id="cartoesAmarelos" required>
+                    <option value="">Selecione</option>
+                    <option value="0">0</option>
+                    <option value="1-2">1–2</option>
+                    <option value="3-4">3–4</option>
+                    <option value="5+">5+</option>
+                  </select>
+                </label>
+                <label class="metric">Posse de bola do Brasil
+                  <select id="posseBrasil" required>
+                    <option value="">Selecione</option>
+                    <option value="0%-45%">0%–45%</option>
+                    <option value="46%-55%">46%–55%</option>
+                    <option value="56%-65%">56%–65%</option>
+                    <option value="66%-75%">66%–75%</option>
+                    <option value="76%-100%">76%–100%</option>
+                  </select>
+                </label>
+                <label class="metric">Posse de bola da Noruega
+                  <select id="posseNoruega" required>
+                    <option value="">Selecione</option>
+                    <option value="0%-45%">0%–45%</option>
+                    <option value="46%-55%">46%–55%</option>
+                    <option value="56%-65%">56%–65%</option>
+                    <option value="66%-75%">66%–75%</option>
+                    <option value="76%-100%">76%–100%</option>
+                  </select>
+                </label>
+                <label class="metric">Resultado do intervalo
+                  <select id="resultadoIntervalo" required></select>
+                </label>
+                <label class="metric">Impedimentos totais
+                  <select id="impedimentos" required>
+                    <option value="">Selecione</option>
+                    <option value="0-1">0–1</option>
+                    <option value="2-3">2–3</option>
+                    <option value="4-5">4–5</option>
+                    <option value="6+">6+</option>
+                  </select>
+                </label>
+                <label class="metric">Finalizações a gol do Brasil<input id="finalizacoesBrasil" type="number" inputmode="numeric" min="0" max="30" required placeholder="Ex.: 12"></label>
+                <label class="metric">Finalizações a gol da Noruega<input id="finalizacoesNoruega" type="number" inputmode="numeric" min="0" max="30" required placeholder="Ex.: 7"></label>
+                <label class="metric">Artilheiro da partida
+                  <select id="artilheiroPartida" required>
+                    <option value="">Selecione</option>
+                    <option value="Neymar">Neymar</option>
+                    <option value="Endrick">Endrick</option>
+                    <option value="Vini Júnior">Vini Júnior</option>
+                  </select>
+                </label>
+                <label class="metric">Brasil × Noruega irá para os pênaltis?
+                  <select id="vaiParaPenaltis" required>
+                    <option value="">Selecione</option>
+                    <option value="Sim">Sim</option>
+                    <option value="Não">Não</option>
+                  </select>
+                </label>
+                <label class="metric">Primeiro gol do Brasil
+                  <select id="primeiroGolBrasil" required>
+                    <option value="">Selecione</option>
+                    <option value="Neymar">Neymar</option>
+                    <option value="Endrick">Endrick</option>
+                    <option value="Vini Júnior">Vini Júnior</option>
+                    <option value="Douglas Santos">Douglas Santos</option>
+                    <option value="Matheus Cunha">Matheus Cunha</option>
+                  </select>
+                </label>
+                <label class="metric">Próximo adversário do Brasil
+                  <select id="proximoAdversarioBrasil" required>
+                    <option value="">Selecione</option>
+                    <option value="Inglaterra">Inglaterra</option>
+                    <option value="México">México</option>
+                  </select>
+                </label>
+              </div>
+            </section>
+
+            <p class="form-footnote">Você pode enviar ou alterar o palpite até 03/07/2026, às 23h50.</p>
+            <div class="prediction-actions">
+              <button id="submit-prediction" class="btn primary" type="submit">Enviar palpite</button>
+              <button id="delete-prediction" class="btn danger" type="button" hidden>Excluir cadastro e todos os palpites</button>
+            </div>
+          </form>
+          <div id="prediction-notice" class="notice"></div>
+        </article>
+      </section>
+
+      <aside class="card side-card">
+        <span class="eyebrow live-eyebrow">Ao vivo</span>
+        <h2>Quem está participando</h2>
+        <p class="side-intro">Acompanhe a participação do bolão sem revelar os palpites antes do resultado final.</p>
+        <div class="side-stats" aria-live="polite">
+          <div class="side-stat"><b id="participants-count">0</b><span>Participantes</span></div>
+          <div class="side-stat"><b id="predictions-count">0</b><span id="predictions-label">Palpites neste jogo</span></div>
+          <div class="side-stat"><b id="total-predictions-count">0</b><span>Palpites no bolão</span></div>
+        </div>
+        <div id="participants-list" class="participants-list" aria-live="polite"></div>
+        <p id="participants-updated" class="participants-updated">Participação ao vivo</p>
+        <div class="privacy-card participation-privacy">
+          <b>Palpites protegidos</b>
+          <p>Antes da finalização, você vê apenas nomes e o status de participação. Após o resultado final, a página de resultado publica os palpites e a pontuação de cada participante.</p>
+        </div>
+      </aside>
+    </section>
+
+    <p class="footer-note">Bolão OAZ · cadastros e palpites são armazenados na base do bolão.</p>
+  </main>
+
+  <div id="saving-overlay" class="saving-overlay" aria-hidden="true" role="status" aria-live="assertive">
+    <div class="saving-card">
+      <div class="soccer-ball" aria-hidden="true">⚽</div>
+      <b id="saving-overlay-text">Estamos salvando os seus dados…</b>
+      <span id="saving-overlay-hint">Aguarde só um instante. Você poderá continuar assim que o envio for confirmado.</span>
+    </div>
+  </div>
+
+  <div id="action-modal" class="action-modal" aria-hidden="true">
+    <section id="action-modal-panel" class="action-modal-panel" role="dialog" aria-modal="true" aria-labelledby="action-modal-title" aria-describedby="action-modal-message">
+      <div id="action-modal-icon" class="action-modal-icon success" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M5 12.5 9.4 17 19 7.5"></path></svg>
+      </div>
+      <span class="eyebrow">Bolão OAZ</span>
+      <h2 id="action-modal-title">Tudo certo</h2>
+      <p id="action-modal-message"></p>
+      <div class="action-modal-actions">
+        <button id="action-modal-cancel" class="btn modal-cancel" type="button" hidden>Cancelar</button>
+        <button id="action-modal-confirm" class="btn primary modal-confirm" type="button">OK</button>
+      </div>
+    </section>
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <script src="../js/config.js?v=13"></script>
+  <script src="../js/api.js?v=13"></script>
+  <script src="../js/app.js?v=13"></script>
+  <script>BolaoApp.boot('palpite');</script>
+</body>
+</html>

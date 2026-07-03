@@ -1,0 +1,5 @@
+BOLÃO OAZ — Brasil × Noruega
+Versão: V13 · UX ágil
+Data: 03/07/2026
+
+Principais mudanças: cadastro sem bloqueio global por versão da base; leituras em cache; sessões locais imediatas; exclusão sem pop-up de espera; sincronização administrativa automática; textos repetidos removidos na aba Resultado.

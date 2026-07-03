@@ -1,0 +1,13 @@
+CHECKLIST V13 — UX ÁGIL
+
+[ ] Backend Code.gs V13 salvo
+[ ] Nova versão da implantação Web App publicada
+[ ] Pasta docs V13 publicada no GitHub Pages
+[ ] ativarSincronizacaoAdministrativa() executada uma vez, caso ainda não esteja ativa
+[ ] Cadastro novo avança para os palpites sem pop-up central
+[ ] Dois cadastros em paralelo não retornam mensagem de “base alterada”
+[ ] E-mail duplicado continua bloqueado
+[ ] Primeiro palpite é salvo corretamente
+[ ] Exclusão pelo site volta ao formulário sem pop-up central de espera
+[ ] Exclusão manual na planilha limpa a sessão no site após o polling ou ao retornar à aba
+[ ] Aba Resultado não repete mensagens de apuração e a lista mostra apenas um status por pessoa

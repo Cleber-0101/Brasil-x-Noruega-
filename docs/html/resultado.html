@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#041b0f">
+  <link rel="icon" href="../assets/favicon.ico" sizes="any">
+  <meta name="description" content="Bolão OAZ — resultado final">
+  <title>Bolão OAZ · Resultado final</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="palpite.html">
+        <img class="brand-logo" src="../assets/logo-oaz.png" alt="OAZ">
+        <span class="brand-copy"><b>Bolão OAZ</b><span>Copa do Mundo 2026</span></span>
+      </a>
+      <nav id="nav-links" class="nav-links" aria-label="Navegação"></nav>
+    </header>
+
+    <section id="match-hero" class="hero"></section>
+    <div id="page-notice" class="notice"></div>
+
+    <section class="layout">
+      <section id="result-content" class="card"></section>
+      <aside class="card side-card">
+        <span class="eyebrow live-eyebrow">Ao vivo</span>
+        <h2>Participação no Bolão</h2>
+        <p class="side-intro">Acompanhe quem já entrou no bolão.</p>
+        <div class="side-stats" aria-live="polite">
+          <div class="side-stat"><b id="participants-count">0</b><span>Participantes</span></div>
+          <div class="side-stat"><b id="predictions-count">0</b><span id="predictions-label">Palpites neste jogo</span></div>
+          <div class="side-stat"><b id="total-predictions-count">0</b><span>Palpites no bolão</span></div>
+        </div>
+        <div id="participants-list" class="participants-list" aria-live="polite"></div>
+        <p id="participants-updated" class="participants-updated">Participação ao vivo</p>
+      </aside>
+    </section>
+
+  </main>
+
+  <div id="saving-overlay" class="saving-overlay" aria-hidden="true" role="status" aria-live="assertive">
+    <div class="saving-card">
+      <div class="soccer-ball" aria-hidden="true">⚽</div>
+      <b id="saving-overlay-text">Estamos salvando os seus dados…</b>
+      <span>Não feche esta página.</span>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <script src="../js/config.js?v=13"></script>
+  <script src="../js/api.js?v=13"></script>
+  <script src="../js/app.js?v=13"></script>
+  <script>BolaoApp.boot('resultado');</script>
+</body>
+</html>

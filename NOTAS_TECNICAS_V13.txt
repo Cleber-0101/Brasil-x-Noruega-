@@ -1,0 +1,7 @@
+NOTAS TÉCNICAS — V13 UX ÁGIL
+
+• O identificador local do participante foi preservado para evitar que pessoas já cadastradas precisem refazer o cadastro após a publicação.
+• A validação da existência do cadastro acontece no momento de salvar/editar um palpite; não há mais bloqueio da tela por verificação global recorrente.
+• O cache público é curto (12 segundos) e é invalidado imediatamente após gravações e alterações administrativas conhecidas pelo Apps Script.
+• Exclusões feitas diretamente na planilha são captadas pelos gatilhos onEdit/onChange. Para garantir que a atualização automática funcione, mantenha o gatilho instalável de alteração de planilha configurado conforme COMO_PUBLICAR_V13.txt.
+• A confirmação de escrita usa requestId idempotente. Em caso de oscilação de rede, uma repetição da mesma solicitação não duplica o cadastro nem o palpite.
